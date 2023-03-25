@@ -1,0 +1,102 @@
+body {
+	margin: 0px;
+	font-family: sans-serif;
+}
+h1 {
+	color: #da6868;
+}
+h1 span {
+	color: #6ead6a;
+}
+.game {
+	background: #353336;
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.game__header {
+	padding-top: 1vmin;
+	padding-bottom: 1vmin;
+
+	display: flex;
+	justify-content: space-between;
+}
+.game__score {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 10px 15px;
+    min-width: 110px;
+    height: 30px;
+    color: #565656;
+    background: #141414;
+    border-radius: 5px;
+    z-index: 1;
+}
+.game__score .count,  
+.game__score .high {
+	text-align: center;
+    width: 50%;
+    font-size: 1.2em;
+    font-family: system-ui;
+	color: #ededed;
+}
+.game__score .high {
+	color: #e5dd97;
+}
+.canvas-wrapper {
+	position: relative;
+	background-color: #1b1b1f;
+	border-radius: 5px;
+	border: 10px solid #161618;
+	box-shadow: 0px 0px 40px 10px #161618;
+}
+.canvas-wrapper .start-window {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 204px;
+	cursor: pointer;
+}
+.canvas-wrapper .start-text {
+	font-family: system-ui;
+    letter-spacing: 1px;
+	color: #4cb968;
+}
+.canvas-wrapper .start-window:hover  .start-text {
+    color: #82DE9B;
+}
+.pause-bg {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	background: rgb(104 104 104 / 33%);
+}
+.pause-bg .restart {
+	display: block;
+    width: 32px;
+    height: 32px;
+	opacity: 0.6;
+}
+.pause-bg .restart::before {
+	content: "";
+	display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: url(../img/restart.png) no-repeat;
+}
+.restart:hover {
+    opacity: 0.8;
+}
+.hide {
+	display: none;
+}
